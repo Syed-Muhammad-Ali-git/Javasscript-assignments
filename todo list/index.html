@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <a href="./todo2.html" class="next_todo">Premium Todo</a>
+    <div class="body_container">
+      <h1>To-Do List</h1>
+      <input
+        type="text"
+        id="todo_input"
+        class="todo_input_search_css"
+        placeholder="Add a new todo"
+        autofocus
+      />
+
+      <button id="add_item_btn" class="btn_css" onclick="addTodoItem()">
+        Add Item
+      </button>
+
+      <button
+        id="delete_all_item_btn"
+        class="btn_css"
+        onclick="deleteAllTodoItems()"
+      >
+        Delete All
+      </button>
+
+      <ul id="list_container"></ul>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

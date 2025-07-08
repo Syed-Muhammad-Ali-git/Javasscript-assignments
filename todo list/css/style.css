@@ -1,0 +1,83 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    height: 100vh;
+}
+
+.body_container {
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
+.todo_input_search_css {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.btn_css {
+    padding: 10px 30px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+}
+
+.btn_css:hover {
+    background-color: #1bd443;
+    color: black;
+}
+
+.btn_css_js {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn_css_js:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.btn_css_js_delete {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.btn_css_js_delete:hover {
+    background-color: red;
+    color: white;
+}
+
+ul {
+    margin-left: 30px;
+    list-style-type: none;
+    font-size: 22px;
+}
+
+.next_todo {
+    color: black;
+    
+    height: 50px;
+    width: 100px;
+    text-align: center;
+
+}
