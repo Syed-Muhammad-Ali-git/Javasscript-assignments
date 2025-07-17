@@ -10,4 +10,3 @@ var h1T = document.createTextNode(
 
 divEl.appendChild(h1El);
 h1El.appendChild(h1T);
-h1El.appendChild(nameEl);
