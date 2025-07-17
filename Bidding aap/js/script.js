@@ -7,6 +7,7 @@ let coins = 1000;
 // create elements
 const showCoins = document.createElement("h1");
 const randomNumber = document.createElement("h1");
+const resultShow = document.createElement("h1");
 const enterCoinsInputEl = document.createElement("input");
 const enterBidAmountInputEl = document.createElement("input");
 const goBtn = document.createElement("button");
@@ -37,6 +38,7 @@ goBtn.onclick = getRandomNumber;
 // append elements to the container
 container.appendChild(showCoins);
 container.appendChild(randomNumber);
+container.appendChild(resultShow);
 container.appendChild(enterCoinsInputEl);
 container.appendChild(enterBidAmountInputEl);
 container.appendChild(goBtn);
@@ -54,16 +56,17 @@ function getRandomNumber() {
   randomNumber.innerText = diceNumber;
 
   if (coins <= 0) {
-    alert("You have no coins left. Please refresh the page to start over.");
+    resultShow.innerText =
+      "You have no coins left. Please refresh the page to start over.";
     return;
   }
   if (bidCoins <= 0 || bidCoins > coins) {
-    alert("Enter coins amount between 1 to 1000.");
+    resultShow.innerText = "Enter coins amount between 1 to 1000.";
     return;
   }
 
   if (bidNumber < 1 || bidNumber > 6) {
-    alert("Enter bid number between 1 and 6.");
+    resultShow.innerText = "Enter bid number between 1 and 6.";
     return;
   }
 
@@ -72,10 +75,10 @@ function getRandomNumber() {
 
   if (diceNumber === bidNumber) {
     coins += bidCoins;
-    alert(`You Won!`);
+    resultShow.innerText = `You Win!`;
   } else {
     coins -= bidCoins;
-    alert(`You Loss!`);
+    resultShow.innerText = `You Loss!`;
   }
 
   showCoins.innerText = `Coins: ${coins}`;

@@ -3,35 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo List</title>
+    <title>Bootstrap Todo List</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <a href="./todo2.html" class="next_todo">Premium Todo</a>
-    <div class="body_container">
-      <h1>To-Do List</h1>
-      <input
-        type="text"
-        id="todo_input"
-        class="todo_input_search_css"
-        placeholder="Add a new todo"
-        autofocus
-      />
+    <section class="vh-100 d-flex m_top">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6">
+            <div class="card shadow" style="border-radius: 0.75rem">
+              <div class="card-body p-4">
+                <h2 class="text-center mb-4 text-primary">
+                  <u>My Todo List</u>
+                </h2>
 
-      <button id="add_item_btn" class="btn_css" onclick="addTodoItem()">
-        Add Item
-      </button>
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    id="todo_input"
+                    class="form-control"
+                    placeholder="Add new task..."
+                    autofocus
+                  />
+                  <button
+                    class="btn btn-primary"
+                    id="add_item_btn"
+                    onclick="addTodoItem()"
+                  >
+                    Add
+                  </button>
+                  <button
+                    class="btn btn-danger"
+                    id="delete_all_item_btn"
+                    onclick="deleteAllTodoItems()"
+                  >
+                    Delete All
+                  </button>
+                </div>
 
-      <button
-        id="delete_all_item_btn"
-        class="btn_css"
-        onclick="deleteAllTodoItems()"
-      >
-        Delete All
-      </button>
-
-      <ul id="list_container"></ul>
-    </div>
+                <ul id="list_container" class="list-unstyled mb-0"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <script src="./js/script.js"></script>
   </body>
