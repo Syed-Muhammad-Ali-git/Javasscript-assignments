@@ -56,17 +56,16 @@ function getRandomNumber() {
   randomNumber.innerText = diceNumber;
 
   if (coins <= 0) {
-    resultShow.innerText =
-      "You have no coins left. Please refresh the page to start over.";
+    resultShow.innerText = `You have no coins left. Please refresh the page to start over.`;
     return;
   }
   if (bidCoins <= 0 || bidCoins > coins) {
-    resultShow.innerText = "Enter coins amount between 1 to 1000.";
+    resultShow.innerText = `Enter coins amount between 1 to 1000.`;
     return;
   }
 
   if (bidNumber < 1 || bidNumber > 6) {
-    resultShow.innerText = "Enter bid number between 1 and 6.";
+    resultShow.innerText = `Enter bid number between 1 and 6.`;
     return;
   }
 

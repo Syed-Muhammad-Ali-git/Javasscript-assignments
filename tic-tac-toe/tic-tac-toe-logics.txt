@@ -1,0 +1,23 @@
+winning patterns for tic tac toe = 
+
+0|1|2
+3|4|5
+6|7|8
+
+when this patterns are same is called winnig patterns,
+
+0,1,2 
+3,4,5
+6,7,8
+0,3,6
+1,4,7
+2,5,8
+0,4,8
+2,4,6
+
+
+there are 8 winning patterns agar 1 bhi match hojai to game win hojaiga 
+or is ma 2 players honga 
+1 ka paas 0 hoga 
+or dosra ka paas X hoga
+

@@ -1,0 +1,187 @@
+/* new code */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at top left, #1d1f27, #121212);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    padding: 20px;
+    position: relative;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    color: #00f2fe;
+    text-shadow: 0 0 10px #00f2fe, 0 0 20px #00f2fe;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: 300px;
+    height: 300px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background: #1e1e1e;
+    border: none;
+    border-radius: 12px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #00f2fe;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00f2fe88;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.box:hover {
+    transform: scale(1.05);
+    background: #2e2e2e;
+    box-shadow: 0 0 15px #00f2fe;
+}
+
+#reset-btn,
+#new-btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    background: #00f2fe;
+    color: #000;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #00f2fe, 0 0 30px #00f2fe66;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+#reset-btn:hover,
+#new-btn:hover {
+    background: #0fd;
+    box-shadow: 0 0 20px #0ff, 0 0 40px #0ff99f;
+}
+
+#msg {
+    font-size: 2rem;
+    color: #ffffff;
+    text-shadow: 0 0 10px #00f2fe;
+    margin-bottom: 10px;
+}
+
+.msg-container {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.85);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #00f2fe88;
+    z-index: 10;
+}
+
+.hide {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .game {
+        width: 90vw;
+        height: 90vw;
+        gap: 0.8rem;
+    }
+
+    .box {
+        font-size: 2.5rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #msg {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #548687;
+    text-align: center;
+}
+
+.container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+
+.box {
+    width: 18vmin;
+    height: 18vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    font-size: 8vmin;
+    color: #b0413e;
+    background-color: #ffffc7;
+}
+
+#reset-btn,
+#new-btn {
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: #191913;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+}
+
+#msg {
+    color: #ffffc7;
+    font-size: 6vmin;
+}
+
+
+
+.hide {
+    display: none;
+} */
