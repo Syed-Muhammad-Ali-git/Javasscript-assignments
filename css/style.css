@@ -2,39 +2,99 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 40px;
+/* Background */
+body,
+html {
+    height: 100%;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Hero Container */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Glassmorphism Card */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     text-align: center;
+    max-width: 450px;
+    width: 100%;
+    animation: fadeIn 1s ease;
 }
 
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #2b7a78;
+/* Heading */
+.card h1 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
-div {
-    margin: 20px auto;
-    width: fit-content;
+/* Subtitle */
+.subtitle {
+    color: #ccc;
+    font-size: 1rem;
+    margin-bottom: 30px;
 }
 
-a {
-    display: inline-block;
-    padding: 12px 24px;
+/* Project Links */
+.links a {
+    display: block;
     text-decoration: none;
-    background-color: #3aafa9;
-    color: white;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: #ffffff;
+    background: rgba(30, 136, 229, 0.7);
+    margin: 10px 0;
+    padding: 14px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-size: 1.05rem;
+    font-weight: 500;
 }
 
-a:hover {
-    background-color: #2b7a78;
+.links a:hover {
+    background-color: #1e88e5;
     transform: scale(1.05);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .card {
+        padding: 30px 20px;
+    }
+
+    .card h1 {
+        font-size: 1.6rem;
+    }
+
+    .links a {
+        font-size: 0.95rem;
+        padding: 12px;
+    }
 }
