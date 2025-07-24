@@ -1,4 +1,4 @@
-let boxes = document.querySelectorAll(".box");
+let btns = document.querySelectorAll(".box");
 let resetBtn = document.querySelector("#reset-btn");
 let newGameBtn = document.querySelector("#new-btn");
 let msgContainer = document.querySelector(".msg-container");
@@ -19,54 +19,54 @@ const winPatterns = [
 
 const resetGame = () => {
   turnO = true;
-  enableBoxes();
+  enableBtns();
   msgContainer.classList.add("hide");
 };
 
-boxes.forEach((box) => {
-  box.addEventListener("click", () => {
+const enableBtns = () => {
+  for (let btn of btns) {
+    btn.disabled = false;
+    btn.innerHTML = "";
+  }
+};
+
+btns.forEach((btn) => {
+  btn.addEventListener("click", () => {
     if (turnO) {
-      box.innerHTML = "O";
+      btn.innerHTML = "O";
       turnO = false;
     } else {
-      box.innerHTML = "X";
+      btn.innerHTML = "X";
       turnO = true;
     }
-    box.disabled = true;
+    btn.disabled = true;
     checkWinner();
   });
 });
 
-const disableBoxes = () => {
-  for (let box of boxes) {
-    box.disabled = true;
-  }
-};
+const checkWinner = () => {
+  for (let pattern of winPatterns) {
+    let position1 = btns[pattern[0]].innerHTML;
+    let position2 = btns[pattern[1]].innerHTML;
+    let position3 = btns[pattern[2]].innerHTML;
 
-const enableBoxes = () => {
-  for (let box of boxes) {
-    box.disabled = false;
-    box.innerHTML = "";
+    if (position1 != "" && position2 != "" && position3 != "") {
+      if (position1 === position2 && position2 === position3) {
+        showWinner(position1);
+      }
+    }
   }
 };
 
 const showWinner = (winner) => {
-  msg.innerHTML = `Congratulations Winner is ${winner}`;
   msgContainer.classList.remove("hide");
-  disableBoxes();
+  msg.innerHTML = `Congratulation Winner is ${winner}`;
+  disableBtns();
 };
 
-const checkWinner = () => {
-  for (let pattern of winPatterns) {
-    let pos1Val = boxes[pattern[0]].innerHTML;
-    let pos2Val = boxes[pattern[1]].innerHTML;
-    let pos3Val = boxes[pattern[2]].innerHTML;
-
-    if (pos1Val != "" && pos2Val != "" && pos3Val != "") {
-      if (pos1Val === pos2Val && pos2Val === pos3Val) {
-        showWinner(pos1Val);
-      }
-    }
+const disableBtns = () => {
+  for (let btn of btns) {
+    btn.disabled = true;
   }
 };
 
