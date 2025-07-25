@@ -16,7 +16,7 @@ const playGame = (userChoice) => {
   const compChoice = genCompChoice();
 
   if (userChoice === compChoice) {
-    msg.innerHTML = "Game was Draw!";
+    msg.innerHTML = "Game was Draw! Try again";
     msg.style.backgroundColor = "black";
   } else {
     let userWin = true;
@@ -27,7 +27,7 @@ const playGame = (userChoice) => {
     } else {
       userWin = compChoice === "rock" ? false : true;
     }
-    showWinner(userWin);
+    showWinner(userWin, userChoice, compChoice);
   }
 };
 
@@ -37,16 +37,16 @@ const genCompChoice = () => {
   return options[randIdx];
 };
 
-const showWinner = (userWin) => {
+const showWinner = (userWin, userChoice, compChoice) => {
   if (userWin) {
     userScore++;
     userScorePara.innerHTML = userScore;
-    msg.innerHTML = "You Win!";
+    msg.innerHTML = `You Win! your ${userChoice} beats ${compChoice}`;
     msg.style.backgroundColor = "green";
   } else {
     compScore++;
     compScorePara.innerHTML = userScore;
-    msg.innerHTML = "You Loss!";
+    msg.innerHTML = `You Loss!  ${compChoice} beats your ${userChoice}`;
     msg.style.backgroundColor = "red";
   }
 };
