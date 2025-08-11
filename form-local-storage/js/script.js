@@ -9,4 +9,3 @@ function dataSubmit() {
   localStorage.setItem("password", JSON.stringify(password.value));
   window.location.href = "./form2.html";
 }
-
