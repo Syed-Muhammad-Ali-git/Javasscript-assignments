@@ -163,3 +163,17 @@ function percentage() {
 
   inputField.focus();
 }
+
+//  check is mobile or not _______________
+
+function isMobileDevice() {
+  return /Mobi|Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(
+    navigator.userAgent
+  );
+}
+
+if (isMobileDevice()) {
+  inputField.setAttribute("readonly", true); // mobile par readonly
+} else {
+  inputField.removeAttribute("readonly"); // desktop par typing allow
+}
