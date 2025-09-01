@@ -13,10 +13,15 @@
       </h2>
 
       <form
-        action="https://formsubmit.co/laptopboy1126@gmail.com"
+        action="https://api.web3forms.com/submit"
         method="POST"
         class="space-y-4"
       >
+        <input
+          type="hidden"
+          name="access_key"
+          value="797436c0-96a3-4cb6-b1ed-de3160072484"
+        />
         <!-- Name -->
         <div>
           <label for="name" class="block text-sm font-medium text-gray-700"
@@ -76,6 +81,13 @@
             class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
           ></textarea>
         </div>
+        <!-- Honeypot Spam Protection -->
+        <input
+          type="checkbox"
+          name="botcheck"
+          class="hidden"
+          style="display: none"
+        />
 
         <!-- Button -->
         <button
