@@ -38,7 +38,7 @@ inputField.addEventListener("keydown", function (event) {
 //  feedback btn function open form in next page on mouse click
 
 function openFeedbackForm() {
-  window.open("../form.html", "_blank");
+  window.open("./form.html", "_blank");
 }
 
 //  equals to function on mouse click
@@ -48,6 +48,7 @@ function calculate() {
     let expression = inputField.value;
 
     // percentage handling: e.g. "100-10%" → "100-(100*10/100)"
+
     expression = expression.replace(
       /(\d+)([+\-])(\d+)%/,
       (match, base, operator, percent) => {
