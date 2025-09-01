@@ -38,7 +38,10 @@ inputField.addEventListener("keydown", function (event) {
 //  feedback btn function open form in next page on mouse click
 
 function openFeedbackForm() {
-  window.open("./form.html", "_blank");
+  window.open(
+    "https://syed-muhammad-ali-git.github.io/Javasscript-assignments/calculator/form.html",
+    "_blank"
+  );
 }
 
 //  equals to function on mouse click
