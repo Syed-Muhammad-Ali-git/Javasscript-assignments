@@ -5,13 +5,13 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
+main {
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 60px;
+    padding-top: 30px;
 }
 
 #container {
@@ -84,4 +84,40 @@ button:hover {
     text-align: center;
     margin-top: 20px;
     font-weight: bold;
+}
+
+.images {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f2027;
+    width: 60px;
+    height: 60px;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+.img_1 {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: white;
+}
+
+.mt {
+    margin-bottom: 40px;
+}
+
+.mb {
+    margin-top: 40px;
+}
+
+.pd {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.mbb {
+    margin-bottom: 15px;
 }

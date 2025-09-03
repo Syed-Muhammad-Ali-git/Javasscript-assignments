@@ -52,8 +52,77 @@ function getRandomNumber() {
   const bidCoins = Number(enterCoinsInputEl.value);
   const bidNumber = Number(enterBidAmountInputEl.value);
 
-  const diceNumber = Math.floor(Math.random() * 6) + 1;
-  randomNumber.innerText = diceNumber;
+  // const diceNumber = Math.floor(Math.random() * 6) + 1;
+  const diceNumber = 1;
+  if (diceNumber === 1) {
+    randomNumber.innerHTML = `
+    <h4 class="mbb">Computer option</h4>
+    <div class="images">
+    <div class="img_1"></div>
+    </div>
+    `;
+  }
+  if (diceNumber === 2) {
+    randomNumber.innerHTML = `
+    <div class="images">
+     <div class="img_1"></div>
+     <div class="img_1"></div>
+    </div>`;
+  }
+  if (diceNumber === 3) {
+    randomNumber.innerHTML = `
+    <div class="images">
+     <div class="img_1 mt"></div>
+     <div class="img_1"></div>
+     <div class="img_1 mb"></div>
+    </div>`;
+  }
+  if (diceNumber === 4) {
+    randomNumber.innerHTML = `
+    <div class="images">  
+     <div>
+      <div class="img_1 pd"></div>
+      <div class="img_1 pd"></div>
+     </div>
+     <div>
+      <div class="img_1 pd"></div>
+      <div class="img_1 pd"></div>
+     </div>
+     </div>`;
+  }
+  if (diceNumber === 5) {
+    randomNumber.innerHTML = `
+    <div class="images">  
+     <div>
+      <div class="img_1 pd"></div>
+      <div class="img_1 pd"></div>
+     </div>
+    <div class="img_1"></div>
+     <div>
+      <div class="img_1 pd"></div>
+      <div class="img_1 pd"></div>
+     </div>
+     </div>`;
+  }
+  if (diceNumber === 6) {
+    randomNumber.innerHTML = `
+   <div class="images">
+    <div>  
+     <div class="img_1 pd"></div>
+     <div class="img_1 pd"></div>
+    </div>
+    <div>  
+     <div class="img_1 pd"></div>
+     <div class="img_1 pd"></div>
+    </div>
+    <div>  
+     <div class="img_1 pd"></div>
+     <div class="img_1 pd"></div>
+    </div>
+    </div>
+    `;
+  }
+  // randomNumber.innerText = diceNumber;
 
   if (coins <= 0) {
     resultShow.innerText = `You have no coins left. Please refresh the page to start over.`;
