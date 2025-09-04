@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@layer components {
+
+    .cardDiv {
+        @apply w-24 h-24 bg-slate-700 rounded-xl flex items-center justify-center text-3xl text-white cursor-pointer transition-transform duration-500 transform rotate-y-180;
+
+    }
+}
