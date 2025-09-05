@@ -47,7 +47,7 @@ function checkMatch() {
       secondCard.classList.remove("flipped");
 
       resetBoard();
-    }, 1000);
+    }, 500);
   }
 }
 
