@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body class="bg-gray-50">
+    <!-- main div  -->
+
+    <main class="max-w-[1920px] mx-auto">
+      <!-- header starts -->
+      <header class="flex flex-col justify-center items-center mt-20">
+        <div class="">
+          <h1 class="text-[44px]">Our Menu</h1>
+        </div>
+        <div class="mt-[-20px]">
+          <h1 class="text-2xl text-[#F59E0B] font-black">___________</h1>
+        </div>
+        <div class="mt-6">
+          <button class="btn" id="all">All</button>
+          <button class="btn" id="breakFast">Breakfast</button>
+          <button class="btn" id="lunch">Lunch</button>
+          <button class="btn" id="shakes">Shakes</button>
+        </div>
+      </header>
+
+      <!-- content starts -->
+
+      <section class="px-20">
+        <div class="">
+          <div
+            id="cardContainer"
+            class="sm:grid sm:grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-10 p-4"
+          ></div>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
