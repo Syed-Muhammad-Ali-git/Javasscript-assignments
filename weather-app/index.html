@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body
+    class="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
+  >
+    <main
+      class="bg-white/20 backdrop-blur-lg p-6 rounded-2xl shadow-2xl w-full max-w-md text-white"
+    >
+      <!-- Search Box -->
+      <div class="flex gap-2 mb-6">
+        <input
+          type="text"
+          autofocus
+          id="inputField"
+          placeholder="Enter city name"
+          class="flex-1 p-3 rounded-xl bg-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-pink-400"
+        />
+        <button
+          id="searchBtn"
+          class="px-4 py-2 rounded-xl bg-pink-500 hover:bg-pink-600 transition"
+        >
+          Search
+        </button>
+      </div>
+
+      <!-- Weather Info -->
+      <div class="space-y-4 text-center">
+        <div id="temp" class="text-5xl font-extrabold">0°C</div>
+        <div id="weather" class="text-xl">Cloudy</div>
+        <div id="weatherIcon" class="flex justify-center">
+          <img
+            src="https://openweathermap.org/img/wn/04d@2x.png"
+            alt="Weather Icon"
+            class="w-20 h-20"
+          />
+        </div>
+        <div id="city" class="text-4xl font-semibold mb-10">city</div>
+
+        <div class="grid grid-cols-3 gap-4 mt-4">
+          <div class="bg-white/20 p-3 rounded-xl">
+            <p class="text-sm">Wind</p>
+            <p id="windSpeed" class="font-bold">0</p>
+          </div>
+          <div class="bg-white/20 p-3 rounded-xl">
+            <p class="text-sm">Humidity</p>
+            <p id="humidity" class="font-bold">0</p>
+          </div>
+          <div class="bg-white/20 p-3 rounded-xl">
+            <p class="text-sm">Visibility</p>
+            <p id="visibility" class="font-bold">0</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
